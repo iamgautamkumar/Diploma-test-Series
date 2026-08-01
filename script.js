@@ -44,21 +44,607 @@ const QUIZ_DATA = [
     description: "Arrays, trees, graphs, sorting and algorithmic complexity.",
     difficulty: "Hard",
     questions: [
-      {
-        question: "What is the time complexity of Binary Search?",
-        options: ["O(n)", "O(n log n)", "O(log n)", "O(1)"],
-        answerIndex: 2
-      },
-      {
-        question: "Which data structure uses LIFO (Last In First Out) order?",
-        options: ["Queue", "Stack", "Linked List", "Tree"],
-        answerIndex: 1
-      },
-      {
-        question: "Which sorting algorithm has the best average case of O(n log n)?",
-        options: ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"],
-        answerIndex: 2
-      }
+      const quizData = [
+  {
+    question: "Which of the following best defines an algorithm?",
+    options: [
+      "A programming language",
+      "A finite set of well-defined instructions to solve a problem",
+      "A type of data structure",
+      "A compiler optimization technique"
+    ],
+    answer: 1
+  },
+  {
+    question: "Data types defined by the system, such as int, float, and char, are called:",
+    options: [
+      "User defined data types",
+      "Abstract data types",
+      "System defined data types",
+      "Composite data types"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is an example of a user-defined data type?",
+    options: [
+      "int",
+      "float",
+      "char",
+      "Structure"
+    ],
+    answer: 3
+  },
+  {
+    question: "In a linear data structure, elements are arranged:",
+    options: [
+      "In a hierarchical manner",
+      "In a sequential manner",
+      "Randomly",
+      "In a circular manner only"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a non-linear data structure?",
+    options: [
+      "Array",
+      "Stack",
+      "Tree",
+      "Queue"
+    ],
+    answer: 2
+  },
+  {
+    question: "An Abstract Data Type (ADT) is defined by:",
+    options: [
+      "Its internal memory layout",
+      "The compiler used to implement it",
+      "The operations that can be performed on it, independent of implementation",
+      "The programming language syntax"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which analysis of an algorithm considers the maximum time taken for any input of size n?",
+    options: [
+      "Average case analysis",
+      "Best case analysis",
+      "Worst case analysis",
+      "Amortized analysis"
+    ],
+    answer: 2
+  },
+  {
+    question: "Best case analysis of an algorithm refers to:",
+    options: [
+      "The minimum time taken for any input of size n",
+      "The maximum possible running time",
+      "The average time over all inputs",
+      "The time taken on the largest possible input"
+    ],
+    answer: 0
+  },
+  {
+    question: "Average case analysis of an algorithm is computed based on:",
+    options: [
+      "Only the smallest input",
+      "Only the largest input",
+      "The expected running time over all possible inputs",
+      "The worst possible input only"
+    ],
+    answer: 2
+  },
+  {
+    question: "Space complexity of an algorithm refers to:",
+    options: [
+      "The time taken to execute the algorithm",
+      "The amount of memory required by the algorithm to run to completion",
+      "The number of lines of code",
+      "The number of variables declared"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which asymptotic notation represents the upper bound of an algorithm's running time?",
+    options: [
+      "Big-O notation",
+      "Omega notation",
+      "Theta notation",
+      "Little-o notation"
+    ],
+    answer: 0
+  },
+  {
+    question: "Omega (Ω) notation is used to represent:",
+    options: [
+      "The upper bound of an algorithm",
+      "The lower bound of an algorithm",
+      "The average bound of an algorithm",
+      "The exact running time only"
+    ],
+    answer: 1
+  },
+  {
+    question: "Theta (Θ) notation represents:",
+    options: [
+      "Only the best case",
+      "Only the worst case",
+      "A tight bound, i.e., both upper and lower bounds",
+      "Only the space complexity"
+    ],
+    answer: 2
+  },
+  {
+    question: "The time complexity of a recursive algorithm is typically analyzed using:",
+    options: [
+      "Big-O notation only",
+      "The Master theorem",
+      "Space complexity formula",
+      "Linear regression"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following best describes recursion?",
+    options: [
+      "A loop that never terminates",
+      "A function that calls itself to solve smaller instances of the same problem",
+      "A method to allocate memory dynamically",
+      "A sorting technique"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of binary search in the worst case?",
+    options: [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(n^2)"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of linear search in the worst case?",
+    options: [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    answer: 2
+  },
+  {
+    question: "A dynamic array differs from a static array because it can:",
+    options: [
+      "Only store integers",
+      "Resize itself automatically when it becomes full",
+      "Never be resized",
+      "Only be used with linked lists"
+    ],
+    answer: 1
+  },
+  {
+    question: "Accessing an element in an array using its index has a time complexity of:",
+    options: [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    answer: 0
+  },
+  {
+    question: "Inserting an element at the beginning of an array requires:",
+    options: [
+      "No shifting of elements",
+      "Shifting all existing elements one position to the right",
+      "Deleting the array first",
+      "Only updating the index pointer"
+    ],
+    answer: 1
+  },
+  {
+    question: "A multi-dimensional array is best described as:",
+    options: [
+      "An array that can only hold one data type",
+      "An array of arrays, used to represent data in more than one dimension",
+      "A linked list variant",
+      "A type of stack"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation on a string checks whether one string is contained within another?",
+    options: [
+      "Concatenation",
+      "Membership/Substring search",
+      "Traversal",
+      "Slicing"
+    ],
+    answer: 1
+  },
+  {
+    question: "A linked list is a data structure where each node contains:",
+    options: [
+      "Only data",
+      "Data and a pointer/reference to the next node",
+      "Only a pointer",
+      "A fixed-size array"
+    ],
+    answer: 1
+  },
+  {
+    question: "In a singly linked list, traversal can be done:",
+    options: [
+      "Only in the reverse direction",
+      "Only in the forward direction",
+      "In both directions equally easily",
+      "Not at all"
+    ],
+    answer: 1
+  },
+  {
+    question: "In a circular linked list, the last node points to:",
+    options: [
+      "NULL",
+      "The first node",
+      "A random node",
+      "Itself"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of inserting a node at the beginning of a singly linked list?",
+    options: [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of searching for an element in an unsorted singly linked list?",
+    options: [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    answer: 2
+  },
+  {
+    question: "Compared to arrays, linked lists have the advantage of:",
+    options: [
+      "Faster random access to elements",
+      "Dynamic memory allocation and easier insertion/deletion",
+      "Requiring less memory per node",
+      "Better cache performance"
+    ],
+    answer: 1
+  },
+  {
+    question: "A key disadvantage of a linked list compared to an array is:",
+    options: [
+      "It cannot store data of the same type",
+      "It does not support traversal",
+      "It does not allow random (direct index-based) access to elements",
+      "It cannot grow dynamically"
+    ],
+    answer: 2
+  },
+  {
+    question: "A stack follows which order of operations?",
+    options: [
+      "First In First Out (FIFO)",
+      "Last In First Out (LIFO)",
+      "Random access order",
+      "Priority based order"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation adds an element to the top of a stack?",
+    options: [
+      "Dequeue",
+      "Push",
+      "Pop",
+      "Peek"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation removes the top element from a stack?",
+    options: [
+      "Enqueue",
+      "Push",
+      "Pop",
+      "Insert"
+    ],
+    answer: 2
+  },
+  {
+    question: "Attempting to push an element onto a completely filled stack results in:",
+    options: [
+      "Stack underflow",
+      "Stack overflow",
+      "Segmentation success",
+      "Automatic resizing without error"
+    ],
+    answer: 1
+  },
+  {
+    question: "Attempting to pop an element from an empty stack results in:",
+    options: [
+      "Stack overflow",
+      "Stack underflow",
+      "A default value being returned",
+      "No effect at all"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a real-world application of a stack?",
+    options: [
+      "CPU scheduling",
+      "Function call management (call stack) and undo operations",
+      "Printer job scheduling",
+      "Breadth-first search"
+    ],
+    answer: 1
+  },
+  {
+    question: "Stacks are commonly used to evaluate which type of expressions?",
+    options: [
+      "Only decimal numbers",
+      "Postfix and infix expressions",
+      "Only floating-point numbers",
+      "Boolean truth tables only"
+    ],
+    answer: 1
+  },
+  {
+    question: "In postfix expression evaluation using a stack, when an operator is encountered, the algorithm:",
+    options: [
+      "Pushes the operator directly",
+      "Pops two operands, applies the operator, and pushes the result",
+      "Ignores the operator",
+      "Restarts the evaluation"
+    ],
+    answer: 1
+  },
+  {
+    question: "Checking for balanced parentheses/symbols in an expression is typically implemented using:",
+    options: [
+      "A queue",
+      "A stack",
+      "A linked list only",
+      "A hash table only"
+    ],
+    answer: 1
+  },
+  {
+    question: "A queue follows which order of operations?",
+    options: [
+      "Last In First Out (LIFO)",
+      "First In First Out (FIFO)",
+      "Random order",
+      "Reverse priority order"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation inserts an element into a queue?",
+    options: [
+      "Push",
+      "Pop",
+      "Enqueue",
+      "Peek"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which operation removes an element from a queue?",
+    options: [
+      "Enqueue",
+      "Dequeue",
+      "Push",
+      "Insert"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a real-world application of a queue?",
+    options: [
+      "Undo operation in text editors",
+      "Function call recursion",
+      "CPU task scheduling and printer job management",
+      "Expression evaluation"
+    ],
+    answer: 2
+  },
+  {
+    question: "A stack can be implemented using which of the following?",
+    options: [
+      "Only arrays",
+      "Only linked lists",
+      "Simple array, dynamic array, or linked list",
+      "Only hash tables"
+    ],
+    answer: 2
+  },
+  {
+    question: "In array implementation of a stack, the 'top' variable is used to:",
+    options: [
+      "Store the size of the array",
+      "Keep track of the index of the topmost element",
+      "Store the bottom element",
+      "Count the number of pop operations"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which condition indicates that a queue implemented using a fixed-size array is full?",
+    options: [
+      "front equals rear only",
+      "rear reaches the maximum index (in a simple, non-circular queue)",
+      "front is greater than rear always",
+      "The queue is never full"
+    ],
+    answer: 1
+  },
+  {
+    question: "A key advantage of implementing a stack using a linked list instead of an array is:",
+    options: [
+      "Constant time random access",
+      "No need to predefine a fixed size, allowing dynamic growth",
+      "Better cache locality",
+      "Simpler code with no pointers"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which asymptotic notation would best describe the statement 'the algorithm takes at least this much time'?",
+    options: [
+      "Big-O",
+      "Theta",
+      "Omega",
+      "None of these"
+    ],
+    answer: 2
+  },
+  {
+    question: "If an algorithm's time complexity is expressed as T(n) = 2T(n/2) + n, which technique is most suitable to solve it?",
+    options: [
+      "Direct substitution only",
+      "Master theorem",
+      "Linear regression",
+      "Graph traversal"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following correctly orders growth rates from smallest to largest?",
+    options: [
+      "O(n^2) < O(log n) < O(n)",
+      "O(log n) < O(n) < O(n^2)",
+      "O(n) < O(log n) < O(n^2)",
+      "O(n^2) < O(n) < O(log n)"
+    ],
+    answer: 1
+  },
+  {
+    question: "The space complexity of an in-place algorithm (using no extra structures dependent on input size) is generally:",
+    options: [
+      "O(n)",
+      "O(n^2)",
+      "O(1)",
+      "O(log n)"
+    ],
+    answer: 2
+  },
+  {
+    question: "Traversing a linked list means:",
+    options: [
+      "Deleting all nodes",
+      "Visiting each node of the list sequentially, typically from head to end",
+      "Sorting the nodes",
+      "Reversing the list"
+    ],
+    answer: 1
+  },
+  {
+    question: "Deleting a node from the middle of a singly linked list requires:",
+    options: [
+      "Updating the next pointer of the previous node to skip the deleted node",
+      "Shifting all elements after it, like in an array",
+      "Rebuilding the entire list",
+      "No pointer changes at all"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which statement about arrays is TRUE?",
+    options: [
+      "Arrays can dynamically change size without any reallocation in all languages",
+      "Arrays store elements in contiguous memory locations",
+      "Arrays cannot be multi-dimensional",
+      "Arrays always have O(n) access time"
+    ],
+    answer: 1
+  },
+  {
+    question: "The 'peek' or 'top' operation in a stack:",
+    options: [
+      "Removes the top element",
+      "Adds a new element to the top",
+      "Returns the top element without removing it",
+      "Empties the entire stack"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is TRUE regarding infix to postfix conversion using a stack?",
+    options: [
+      "Operators are stored based on their precedence using a stack",
+      "It requires two queues instead of a stack",
+      "It cannot handle parentheses",
+      "It only works for single-digit numbers"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which of the following data structures would be most efficient for implementing an 'undo' feature in software?",
+    options: [
+      "Queue",
+      "Stack",
+      "Array only",
+      "Tree"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following data structures would be most suitable for implementing a print job scheduler that processes jobs in the order they arrive?",
+    options: [
+      "Stack",
+      "Queue",
+      "Binary tree",
+      "Graph"
+    ],
+    answer: 1
+  },
+  {
+    question: "A doubly linked list differs from a singly linked list because each node:",
+    options: [
+      "Has no pointer at all",
+      "Has pointers to both the next and previous nodes",
+      "Can only store numeric data",
+      "Cannot be traversed"
+    ],
+    answer: 1
+  },
+  {
+    question: "Time complexity of accessing the first element in a singly linked list (the head) is:",
+    options: [
+      "O(n)",
+      "O(1)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    answer: 1
+  },
+  {
+    question: "In worst-case analysis, we generally consider:",
+    options: [
+      "The input that makes the algorithm run fastest",
+      "The input that makes the algorithm run slowest",
+      "Only randomly chosen inputs",
+      "Inputs of size zero only"
+    ],
+    answer: 1
+  }
     ]
   },
   {
