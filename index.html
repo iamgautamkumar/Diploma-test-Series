@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Test Portal | Practice. Learn. Improve.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- LOADING SCREEN -->
+  <!-- ===================================================== -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span class="logo-text">Quiz<span class="logo-highlight">Portal</span></span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
+      </div>
+      <p class="loader-tagline">Practice. Learn. Improve.</p>
+    </div>
+    <div class="loader-bg-shape shape-1"></div>
+    <div class="loader-bg-shape shape-2"></div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- ANIMATED BACKGROUND SHAPES (Global) -->
+  <!-- ===================================================== -->
+  <div class="bg-shapes">
+    <div class="shape shape-a"></div>
+    <div class="shape shape-b"></div>
+    <div class="shape shape-c"></div>
+    <div class="shape shape-d"></div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- NAVBAR -->
+  <!-- ===================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" onclick="goHome()">
+        <i class="fa-solid fa-graduation-cap nav-logo-icon"></i>
+        <span>Quiz<span class="logo-highlight">Portal</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active" onclick="goHome()">Home</a></li>
+        <li><a href="#subjects" class="nav-link" onclick="scrollToSubjects()">Subjects</a></li>
+        <li><a href="#about" class="nav-link" onclick="scrollToAbout()">About</a></li>
+      </ul>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================================================== -->
+  <!-- MAIN APP CONTAINER (Page Transition Wrapper) -->
+  <!-- ===================================================== -->
+  <main id="app">
+
+    <!-- ================================================= -->
+    <!-- HOME PAGE -->
+    <!-- ================================================= -->
+    <section id="home-page" class="page active-page">
+
+      <!-- HERO SECTION -->
+      <header class="hero" id="home">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <i class="fa-solid fa-bolt"></i> #1 Online Quiz Test Portal
+          </div>
+          <h1 class="hero-title reveal">
+            Test Your Knowledge.<br>
+            <span class="gradient-text">Boost Your Skills.</span>
+          </h1>
+          <p class="hero-subtitle reveal">
+            Practice. Learn. Improve. — Attempt professionally curated quizzes across
+            Engineering, Programming, and Core Computer Science subjects.
+          </p>
+          <div class="hero-buttons reveal">
+            <button class="btn btn-primary ripple" onclick="scrollToSubjects()">
+              <i class="fa-solid fa-play"></i> Start Learning
+            </button>
+            <button class="btn btn-outline ripple" onclick="scrollToAbout()">
+              <i class="fa-solid fa-circle-info"></i> Learn More
+            </button>
+          </div>
+
+          <!-- ANIMATED COUNTERS -->
+          <div class="hero-stats reveal">
+            <div class="stat-box">
+              <h3 class="counter" data-target="11">0</h3>
+              <p>Subjects</p>
+            </div>
+            <div class="stat-box">
+              <h3 class="counter" data-target="330">0</h3>
+              <p>Practice Questions</p>
+            </div>
+            <div class="stat-box">
+              <h3 class="counter" data-target="5000">0</h3>
+              <p>Students Practicing</p>
+            </div>
+            <div class="stat-box">
+              <h3 class="counter" data-target="98">0</h3>
+              <p>% Satisfaction</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="floating-card card-1">
+            <i class="fa-solid fa-code"></i>
+            <span>DSA Quiz</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Electronics</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fa-solid fa-square-root-variable"></i>
+            <span>Mathematics</span>
+          </div>
+          <div class="hero-orb">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- SUBJECTS SECTION -->
+      <section class="subjects-section" id="subjects">
+        <div class="section-heading reveal">
+          <span class="section-tag">Choose Your Path</span>
+          <h2>Explore Our Subjects</h2>
+          <p>Pick a subject below and start testing your knowledge instantly.</p>
+        </div>
+
+        <div class="subjects-grid" id="subjects-grid">
+          <!-- Subject cards are injected dynamically by script.js -->
+        </div>
+      </section>
+
+      <!-- ABOUT / FEATURES SECTION -->
+      <section class="about-section" id="about">
+        <div class="section-heading reveal">
+          <span class="section-tag">Why Choose Us</span>
+          <h2>Built For Serious Learners</h2>
+          <p>A modern, distraction-free environment engineered to help you learn faster.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Instant Scoring</h3>
+            <p>Get your results, percentage and rank the moment you finish a test.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <h3>Digital Certificates</h3>
+            <p>Download a professional certificate after every completed quiz.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Track Progress</h3>
+            <p>Detailed breakdown of correct, wrong answers and performance insights.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>Fully Responsive</h3>
+            <p>Take your tests seamlessly on desktop, tablet, or mobile devices.</p>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- QUIZ PAGE -->
+    <!-- ================================================= -->
+    <section id="quiz-page" class="page">
+      <div class="quiz-wrapper">
+
+        <div class="quiz-topbar reveal">
+          <button class="btn btn-ghost" onclick="confirmExitQuiz()">
+            <i class="fa-solid fa-arrow-left"></i> Exit
+          </button>
+          <h2 id="quiz-subject-title">Subject Name</h2>
+          <div class="quiz-score-chip">
+            <i class="fa-solid fa-star"></i>
+            <span>Score: <span id="live-score">0</span></span>
+          </div>
+        </div>
+
+        <div class="quiz-progress-area">
+          <div class="progress-info">
+            <span id="question-counter">Question 1 of 3</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <div class="quiz-card" id="quiz-card">
+          <div class="quiz-card-header">
+            <span class="question-badge" id="question-number-badge">Q1</span>
+            <span class="difficulty-badge" id="quiz-difficulty-badge">Medium</span>
+          </div>
+
+          <h3 class="question-text" id="question-text">
+            Question text will appear here.
+          </h3>
+
+          <div class="options-list" id="options-list">
+            <!-- Options injected by JS -->
+          </div>
+        </div>
+
+        <div class="quiz-nav-buttons">
+          <button class="btn btn-outline ripple" id="prev-btn" onclick="prevQuestion()">
+            <i class="fa-solid fa-arrow-left"></i> Previous
+          </button>
+          <button class="btn btn-primary ripple" id="next-btn" onclick="nextQuestion()">
+            Next <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- RESULT PAGE -->
+    <!-- ================================================= -->
+    <section id="result-page" class="page">
+      <div class="result-wrapper">
+
+        <div class="result-card reveal">
+          <div class="result-confetti" id="result-confetti"></div>
+
+          <div class="result-icon-circle">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+
+          <h2 class="result-heading">Congratulations!</h2>
+          <p class="result-subject" id="result-subject-name">Subject Name</p>
+
+          <div class="result-rank-badge" id="result-rank-badge">
+            <span id="result-rank-letter">A</span>
+          </div>
+
+          <p class="result-performance-msg" id="result-performance-msg">Great job! Keep practicing.</p>
+
+          <div class="result-stats-grid">
+            <div class="result-stat-box">
+              <i class="fa-solid fa-percent"></i>
+              <h4 id="result-percentage">0%</h4>
+              <p>Percentage</p>
+            </div>
+            <div class="result-stat-box">
+              <i class="fa-solid fa-check"></i>
+              <h4 id="result-correct">0</h4>
+              <p>Correct</p>
+            </div>
+            <div class="result-stat-box">
+              <i class="fa-solid fa-xmark"></i>
+              <h4 id="result-wrong">0</h4>
+              <p>Wrong</p>
+            </div>
+            <div class="result-stat-box">
+              <i class="fa-solid fa-star"></i>
+              <h4 id="result-score">0</h4>
+              <p>Total Score</p>
+            </div>
+          </div>
+
+          <div class="result-buttons">
+            <button class="btn btn-primary ripple" onclick="viewCertificate()">
+              <i class="fa-solid fa-certificate"></i> View Certificate
+            </button>
+            <button class="btn btn-outline ripple" onclick="restartQuiz()">
+              <i class="fa-solid fa-rotate-right"></i> Restart Test
+            </button>
+            <button class="btn btn-ghost ripple" onclick="goHome()">
+              <i class="fa-solid fa-house"></i> Back To Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- CERTIFICATE PAGE -->
+    <!-- ================================================= -->
+    <section id="certificate-page" class="page">
+      <div class="certificate-wrapper">
+
+        <div class="certificate-actions reveal">
+          <button class="btn btn-ghost" onclick="backToResult()">
+            <i class="fa-solid fa-arrow-left"></i> Back to Result
+          </button>
+          <div class="certificate-action-btns">
+            <button class="btn btn-outline ripple" onclick="printCertificate()">
+              <i class="fa-solid fa-print"></i> Print
+            </button>
+            <button class="btn btn-primary ripple" onclick="downloadCertificate()">
+              <i class="fa-solid fa-download"></i> Download PDF
+            </button>
+          </div>
+        </div>
+
+        <div class="certificate-outer reveal">
+          <div class="certificate" id="certificate">
+            <div class="certificate-border">
+              <div class="certificate-corner tl"></div>
+              <div class="certificate-corner tr"></div>
+              <div class="certificate-corner bl"></div>
+              <div class="certificate-corner br"></div>
+
+              <div class="certificate-header">
+                <i class="fa-solid fa-graduation-cap cert-logo-icon"></i>
+                <h3>Quiz<span class="logo-highlight">Portal</span></h3>
+              </div>
+
+              <p class="certificate-label">Certificate of Achievement</p>
+              <p class="certificate-presented">This certificate is proudly presented to</p>
+
+              <h1 class="certificate-name" id="cert-student-name">Student Name</h1>
+
+              <p class="certificate-desc">
+                for successfully completing the online assessment in
+              </p>
+              <h2 class="certificate-subject" id="cert-subject-name">Subject Name</h2>
+
+              <div class="certificate-stats">
+                <div class="cert-stat">
+                  <span class="cert-stat-label">Score</span>
+                  <span class="cert-stat-value" id="cert-score">0</span>
+                </div>
+                <div class="cert-stat">
+                  <span class="cert-stat-label">Percentage</span>
+                  <span class="cert-stat-value" id="cert-percentage">0%</span>
+                </div>
+                <div class="cert-stat">
+                  <span class="cert-stat-label">Rank</span>
+                  <span class="cert-stat-value" id="cert-rank">A</span>
+                </div>
+              </div>
+
+              <div class="certificate-footer">
+                <div class="cert-footer-col">
+                  <p class="cert-date" id="cert-date">01 Jan 2026</p>
+                  <span class="cert-footer-line">Date Issued</span>
+                </div>
+                <div class="cert-footer-col cert-seal">
+                  <i class="fa-solid fa-stamp"></i>
+                </div>
+                <div class="cert-footer-col">
+                  <p class="cert-id" id="cert-id">QP-000000</p>
+                  <span class="cert-footer-line">Certificate ID</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- NAME PROMPT MODAL (used before generating certificate) -->
+  <!-- ===================================================== -->
+  <div class="modal-overlay" id="name-modal-overlay">
+    <div class="modal-box">
+      <h3><i class="fa-solid fa-user-pen"></i> Enter Your Name</h3>
+      <p>This name will appear on your certificate.</p>
+      <input type="text" id="student-name-input" placeholder="e.g. John Doe" maxlength="40">
+      <div class="modal-buttons">
+        <button class="btn btn-outline ripple" onclick="closeNameModal()">Cancel</button>
+        <button class="btn btn-primary ripple" onclick="confirmStudentName()">Continue <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- EXIT QUIZ CONFIRM MODAL -->
+  <!-- ===================================================== -->
+  <div class="modal-overlay" id="exit-modal-overlay">
+    <div class="modal-box">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> Exit Quiz?</h3>
+      <p>Your current progress will be lost. Are you sure you want to exit?</p>
+      <div class="modal-buttons">
+        <button class="btn btn-outline ripple" onclick="closeExitModal()">Stay</button>
+        <button class="btn btn-primary ripple" onclick="exitQuizConfirmed()">Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- TOAST NOTIFICATION -->
+  <!-- ===================================================== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ===================================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3>Quiz Test Portal</h3>
+        <p class="footer-tagline">Practice. Learn. Improve.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home" onclick="goHome()">Home</a>
+        <a href="#subjects" onclick="scrollToSubjects()">Subjects</a>
+        <a href="#about" onclick="scrollToAbout()">About</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year"></span> Quiz Test Portal. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
