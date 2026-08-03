@@ -18,7 +18,7 @@ const QUIZ_DATA = [
     name: "Digital Electronics & Microprocessor",
     icon: "fa-solid fa-microchip",
     description: "Logic gates, number systems, and microprocessor architecture.",
-    difficulty: "Medium",
+    difficulty: "Medium hard",
     questions: [
       {
         question: "Which logic gate produces a HIGH output only when all inputs are HIGH?",
