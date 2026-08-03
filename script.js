@@ -25,16 +25,23 @@ const QUIZ_DATA = [
         options: ["OR Gate", "AND Gate", "NOR Gate", "XOR Gate"],
         answerIndex: 1
       },
-      {
-        question: "The 8085 microprocessor is a ____-bit processor.",
-        options: ["4-bit", "8-bit", "16-bit", "32-bit"],
-        answerIndex: 1
-      },
-      {
-        question: "Which number system uses only digits 0 and 1?",
-        options: ["Decimal", "Octal", "Binary", "Hexadecimal"],
-        answerIndex: 2
-      }
+   
+  // ===================== UNIT 1: Number Systems, Boolean Algebra and Logic Gates =====================
+  { id: 1, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "What is the base (radix) of the octal number system?", options: ["2","8","10","16"], answer: 1, explanation: "Octal numbers use 8 digits (0-7), so base is 8.", difficulty: "Easy" },
+  { id: 2, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert binary 1011 to decimal.", options: ["9","11","13","15"], answer: 1, explanation: "1011 = 8+0+2+1 = 11.", difficulty: "Easy" },
+  { id: 3, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert decimal 25 to binary.", options: ["11001","11010","10101","11101"], answer: 0, explanation: "25 = 16+8+1 = 11001.", difficulty: "Easy" },
+  { id: 4, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert hexadecimal 2F to decimal.", options: ["45","47","46","48"], answer: 1, explanation: "2F = 2*16 + 15 = 47.", difficulty: "Easy" },
+  { id: 5, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "How many digits are used in the hexadecimal number system?", options: ["8","10","16","32"], answer: 2, explanation: "Hex uses 16 symbols: 0-9 and A-F.", difficulty: "Easy" },
+  { id: 6, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert octal 17 to decimal.", options: ["13","15","17","19"], answer: 1, explanation: "17(octal) = 1*8+7 = 15.", difficulty: "Easy" },
+  { id: 7, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert decimal 100 to hexadecimal.", options: ["64","6A","74","5F"], answer: 0, explanation: "100 in hex is 64 (6*16+4=100).", difficulty: "Medium" },
+  { id: 8, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert binary 11011 to octal.", options: ["33","32","27","31"], answer: 0, explanation: "Group as 011 011 = 3 3 -> 33 octal.", difficulty: "Medium" },
+  { id: 9, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Convert hexadecimal 1A to binary.", options: ["00011010","00011001","00010110","00011110"], answer: 0, explanation: "1=0001, A=1010, so 00011010.", difficulty: "Medium" },
+  { id: 10, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Number Systems", question: "Which number system is most efficient for representing data in digital computers?", options: ["Decimal","Binary","Octal","Hexadecimal"], answer: 1, explanation: "Digital circuits use two states (0,1), matching binary directly.", difficulty: "Easy" },
+  { id: 11, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Arithmetic Operations", question: "Add binary numbers 1011 + 1101.", options: ["11000","11001","11010","10111"], answer: 0, explanation: "1011+1101 = 11000 in binary.", difficulty: "Medium" },
+  { id: 12, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Arithmetic Operations", question: "Subtract 1010 - 0111 in binary.", options: ["0011","0010","0001","0100"], answer: 0, explanation: "1010-0111 = 0011 (decimal 10-7=3).", difficulty: "Medium" },
+  { id: 13, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Arithmetic Operations", question: "Multiply binary 101 x 011.", options: ["01111","01110","01101","10001"], answer: 0, explanation: "5 x 3 = 15 = 01111.", difficulty: "Medium" },
+  { id: 14, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Arithmetic Operations", question: "Add hexadecimal 1A + 0F.", options: ["29","28","2A","27"], answer: 1, explanation: "1A(26)+0F(15)=41 decimal = 29 hex.", difficulty: "Medium" },
+  { id: 15, unit: "Unit-1.0 Number Systems, Boolean Algebra and Logic Gates", topic: "Arithmetic Operations", ques
     ]
   },
   {
